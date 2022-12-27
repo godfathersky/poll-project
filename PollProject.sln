@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollProject.Server", "Server\PollProject.Server.csproj", "{BB38E398-7426-4EF8-8014-AD15BDB6EDF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollProject.Server", "Server\PollProject.Server.csproj", "{BB38E398-7426-4EF8-8014-AD15BDB6EDF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollProject.Client", "Client\PollProject.Client.csproj", "{4744BA4A-4800-485B-9C4F-332E2A106C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollProject.Client", "Client\PollProject.Client.csproj", "{4744BA4A-4800-485B-9C4F-332E2A106C14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollProject.Shared", "Shared\PollProject.Shared.csproj", "{FEC159C5-EFF7-495C-A8CD-F323DFBABD87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollProject.Shared", "Shared\PollProject.Shared.csproj", "{FEC159C5-EFF7-495C-A8CD-F323DFBABD87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

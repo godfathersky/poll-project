@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.register-form{
+    display: flex;
+    justify-content: center;
+}
+
+.justify-start{
+    justify-content: center !important;
+}

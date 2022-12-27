@@ -1,0 +1,13 @@
+*[b-48g5f5w4m8] {
+    margin: 0;
+    padding: 0;
+}
+
+.video-container[b-48g5f5w4m8]{
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+}
