@@ -1,0 +1,14 @@
+C:\Users\rober\source\repos\PollProject\Shared\bin\Debug\net6.0\PollProject.Shared.deps.json
+C:\Users\rober\source\repos\PollProject\Shared\bin\Debug\net6.0\PollProject.Shared.dll
+C:\Users\rober\source\repos\PollProject\Shared\bin\Debug\net6.0\PollProject.Shared.pdb
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.csproj.AssemblyReference.cache
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.AssemblyInfoInputs.cache
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.AssemblyInfo.cs
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.csproj.CoreCompileInputs.cache
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.dll
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\refint\PollProject.Shared.dll
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.pdb
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\ref\PollProject.Shared.dll
+C:\Users\rober\source\repos\PollProject\Shared\bin\Debug\net6.0\PollProject.Shared.runtimeconfig.json
+C:\Users\rober\source\repos\PollProject\Shared\obj\Debug\net6.0\PollProject.Shared.genruntimeconfig.cache
