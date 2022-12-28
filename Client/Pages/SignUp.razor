@@ -6,16 +6,16 @@
 
 <PageTitle>Sign up</PageTitle>
 
-<MudThemeProvider></MudThemeProvider>
+<MudThemeProvider  Theme="MyCustomTheme"></MudThemeProvider>
 
 <div class="register-form">
     <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
         <DataAnnotationsValidator/>
             <MudGrid Style="justify-content: center !important;">
-                <MudItem xs="12" sm="7">
+                <MudItem xs="12" sm="7"  Style="width: 50vw;">
                     <MudCard>
                         <MudCardContent>
-                            <MudTextField Label="Nickname" HelperText="Max. 8 characters"
+                            <MudTextField Label="Nickname" HelperText="Type your nickname"
                                           @bind-Value="model.Nickname" For="@(() => model.Nickname)"/>
                             <MudTextField Label="Email" Class="mt-3"
                                           @bind-Value="model.Email" For="@(() => model.Email)"/>
@@ -25,7 +25,7 @@
                                           @bind-Value="model.Password2" For="@(() => model.Password2)" InputType="InputType.Password"/>
                         </MudCardContent>
                         <MudCardActions>
-                            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
+                            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="ml-auto">Register</MudButton>
                         </MudCardActions>
                     </MudCard>
                 </MudItem>
@@ -68,4 +68,17 @@
         StateHasChanged();
     }
 
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Grey.Darken4,
+            Secondary = Colors.Green.Accent4,
+            AppbarBackground = Colors.Red.Default,
+        },
+        PaletteDark = new PaletteDark()
+        {
+            Primary = Colors.Grey.Darken4
+        }
+    };
 }

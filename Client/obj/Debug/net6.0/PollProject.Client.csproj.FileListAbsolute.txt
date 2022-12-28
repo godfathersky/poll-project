@@ -1846,3 +1846,5 @@ C:\Users\rober\Documents\GitHub\poll-project\Client\obj\Debug\net6.0\PollProject
 C:\Users\rober\Documents\GitHub\poll-project\Client\obj\Debug\net6.0\ref\PollProject.Client.dll
 C:\Users\rober\Documents\GitHub\poll-project\Client\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
 C:\Users\rober\Documents\GitHub\poll-project\Client\obj\Debug\net6.0\scopedcss\Pages\SignUp.razor.rz.scp.css
+C:\Users\rober\Documents\GitHub\poll-project\Client\obj\Debug\net6.0\scopedcss\Pages\CreatePoll.razor.rz.scp.css
+C:\Users\rober\Documents\GitHub\poll-project\Client\obj\Debug\net6.0\scopedcss\Pages\SignIn.razor.rz.scp.css

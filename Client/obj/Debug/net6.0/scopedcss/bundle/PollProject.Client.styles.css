@@ -1,3 +1,11 @@
+/* /Pages/CreatePoll.razor.rz.scp.css */
+body[b-tg6aoqnoz0] {
+}
+
+.create-poll-form[b-tg6aoqnoz0] {
+    display: flex;
+    justify-content: center;
+}
 /* /Pages/Index.razor.rz.scp.css */
 *[b-48g5f5w4m8] {
     margin: 0;
@@ -12,6 +20,14 @@
     position: absolute;
     left: 0;
 }
+/* /Pages/SignIn.razor.rz.scp.css */
+body[b-wbkcybhqah] {
+}
+
+.login-form[b-wbkcybhqah] {
+    display: flex;
+    justify-content: center;
+}
 /* /Pages/SignUp.razor.rz.scp.css */
 body[b-llcn09d2ng] {
 }
@@ -19,10 +35,6 @@ body[b-llcn09d2ng] {
 .register-form[b-llcn09d2ng]{
     display: flex;
     justify-content: center;
-}
-
-.justify-start[b-llcn09d2ng]{
-    justify-content: center !important;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 *[b-lsyc32u2ir]{
@@ -39,6 +51,10 @@ body[b-llcn09d2ng] {
 
 main[b-lsyc32u2ir] {
     flex: 1;
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar[b-lsyc32u2ir] {
@@ -111,6 +127,9 @@ main[b-lsyc32u2ir] {
     .top-row[b-lsyc32u2ir], article[b-lsyc32u2ir] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
+        display: flex;
+        height: 75vh;
+        align-items: center;
     }
 }
 /* /Shared/NavMenu.razor.rz.scp.css */

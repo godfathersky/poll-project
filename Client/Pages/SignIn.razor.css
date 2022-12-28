@@ -1,7 +1,7 @@
 ﻿body {
 }
 
-.register-form{
+.login-form {
     display: flex;
     justify-content: center;
 }

@@ -4,60 +4,61 @@
 @using static MudBlazor.CategoryTypes
 @using MudBlazor.Components
 
-<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
-<MudThemeProvider></MudThemeProvider>
+<PageTitle>Create poll</PageTitle>
 
-<DataAnnotationsValidator/>
-<MudGrid>
-    <MudItem xs="12" sm="7">
-        <MudCard>
-            <MudCardContent>
-                <MudTextField Label="Title" HelperText="Max. 50 characters"
-                              @bind-Value="model.Title" For="@(() => model.Title)"/>
-                <MudTextField Label="Voting type" Class="mt-3"
-                              @bind-Value="model.VotingType" For="@(() => model.VotingType)"/>
-                <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
-                              @bind-Value="model.Password" For="@(() => model.Password)" InputType="InputType.Password"/>
-                <MudTextField Label="Password" HelperText="Repeat the password" Class="mt-3"
-                              @bind-Value="model.Password2" For="@(() => model.Password2)" InputType="InputType.Password"/>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </MudItem>
-    <MudItem xs="12" sm="5">
-        <MudPaper Class="pa-4 mud-height-full">
-            <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
-            @if (success)
-            {
-                <MudText Color="Color.Success">Success</MudText>
-            }
-            else
-            {
-                <MudText Color="@Color.Error">
-                    <ValidationSummary />
-                </MudText>
-            }
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12">
-        <MudText Typo="Typo.body2" Align="Align.Center">
-            Fill out the form correctly to see the success message.
-        </MudText>
-    </MudItem>
-</MudGrid>
-</EditForm>
+<MudThemeProvider Theme="MyCustomTheme"></MudThemeProvider>
 
+<div class="create-poll-form">
+   <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+   <DataAnnotationsValidator/>
+        <MudGrid Style="justify-content: center !important;">
+            <MudItem xs="12" sm="7" Style="width: 50vw;">
+                <MudCard>
+                    <MudCardContent>
+                        <MudTextField Label="Title" HelperText="Max. 50 characters"
+                                      @bind-Value="model.Title" For="@(() => model.Title)"/>
+                        <MudSelect @bind-Value="@voteType" Variant="Variant.Outlined">
+                            <MudSelectItem Value="@("Single choice")">Single choice</MudSelectItem>
+                            <MudSelectItem Value="@("Multiple choice")">Multiple choice</MudSelectItem>
+                            <MudSelectItem Value="@("TBH")">TBH</MudSelectItem>
+                        </MudSelect>
+                        <MudTextField Label="Option1" HelperText="Type a option 1" Class="mt-3"
+                                      @bind-Value="model.Option1" For="@(() => model.Option1)"/>
+                        <MudTextField Label="Option2" HelperText="Type a option 2" Class="mt-3"
+                                      @bind-Value="model.Option2" For="@(() => model.Option2)"/>
+                        @{
+                            int i = 2;
+                        }
+                        @foreach (var option in options)
+                        {
+                            i++;
+                            <MudTextField Label="Option2" HelperText="Type a option " Class="mt-3"
+                                      @bind-Value="model.Option2" For="@(() => model.Option2)">@i</MudTextField>
+                        }
+
+                        <MudButton Variant="Variant.Filled" Color="Color.Dark" Class="ml-auto" @onclick="AddOption">Add option</MudButton>
+                        <MudButton Variant="Variant.Filled" Color="Color.Dark" Class="ml-auto" @onclick="RemoveOption">Remove option</MudButton>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="ml-auto">Create</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+    </EditForm>
+</div>
 
 @code {
     RegisterAccountForm model = new RegisterAccountForm();
+    List<string> options = new List<string>();
+    string voteType = "Single choice";
     bool success;
+    int i = 2;
 
     public class RegisterAccountForm
     {
         [Required]
-        [StringLength(50, ErrorMessage = "Name length can't be more than 50.")]
+        [StringLength(50, ErrorMessage = "Title length can't be more than 50.")]
         public string Title { get; set; }
 
         [Required]
@@ -65,12 +66,12 @@
         public string VotingType { get; set; }
 
         [Required]
-        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 8)]
-        public string Password { get; set; }
+        [StringLength(50, ErrorMessage = "Option 1 length can't be more than 50.")]
+        public string Option1 { get; set; }
 
         [Required]
-        [Compare(nameof(Password))]
-        public string Password2 { get; set; }
+        [StringLength(50, ErrorMessage = "Option 2 length can't be more than 50.")]
+        public string Option2 { get; set; }
 
     }
 
@@ -80,4 +81,27 @@
         StateHasChanged();
     }
 
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Grey.Darken4,
+            Secondary = Colors.Green.Accent4,
+            AppbarBackground = Colors.Red.Default,
+        },
+        PaletteDark = new PaletteDark()
+        {
+            Primary = Colors.Grey.Darken4
+        }
+    };
+
+    private void AddOption()
+    {
+        options.Add("option");
+    }
+
+    private void RemoveOption()
+    {
+        options.RemoveAt(options.Count() - 1);
+    }
 }
